@@ -5,7 +5,7 @@ else:
 
 
 def len_of_passwd():
-    len_of_passwd = input("How Much Length You Want: ")
+    len_of_passwd = input("Total Length of password [20]: ")
     # if user put blank defalut value applied
     if len(str(len_of_passwd)) == 0:
         len_of_passwd = 20
@@ -13,7 +13,7 @@ def len_of_passwd():
 
 
 def prefix():
-    do_prefix = input("do you want prefix [Y/n]: ")
+    do_prefix = input("Do you want prefix\t[Y/n]: ")
     if do_prefix != "n" and do_prefix != "N":
         prefix = input("enter your prefix: ")
         return prefix
