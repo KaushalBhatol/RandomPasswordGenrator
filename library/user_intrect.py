@@ -14,7 +14,7 @@ def len_of_passwd():
 
 def prefix():
     do_prefix = input("Do you want prefix\t[N/y]: ")
-    if do_prefix == "y" and do_prefix == "Y":
+    if do_prefix == "y" or do_prefix == "Y":
         prefix = input("enter your prefix: ")
     else:
         prefix = ""

@@ -5,7 +5,7 @@ import library.user_intrect as ui   # importing user_intrect module as ui
 passwd = ui.prefix()
 length = ui.len_of_passwd()-len(passwd)
 
-if len(passwd) > length:
+if len(passwd) > length or length > 60:
     print("Please enter valid length")
 else:
     choice_of_char = ui.choice_of_char()
