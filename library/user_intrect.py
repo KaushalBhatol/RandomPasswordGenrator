@@ -12,8 +12,13 @@ def len_of_passwd():
     return int(len_of_passwd)
 
 
-# getting choice from user for character and return
-# random list which contain characters
+def prefix():
+    do_prefix = input("do you want prefix [Y/n]: ")
+    if do_prefix != "n" and do_prefix != "N":
+        prefix = input("enter your prefix: ")
+        return prefix
+
+
 def choice_of_char():
     random_list = []
     random_list.clear()
