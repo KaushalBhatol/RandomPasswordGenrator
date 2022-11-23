@@ -4,8 +4,8 @@ import tkinter as tk
 root = tk.Tk()
 
 # setting the windows size
-root.title(" Password Genrator by Kaushal Bhatol")
-root.geometry("500x250")
+root.title(" Password Genrator ")
+root.geometry("540x300")
 
 # declaring string variable
 # for storing values
@@ -42,38 +42,38 @@ def submit():
 
 # creating a label using widget Label
 # prefix
-prefix_label = tk.Label(root, text='Enter Prefix',
+prefix_label = tk.Label(root, text='Prefix:',
                         font=('calibre', 10, 'bold'))
 prefix_entry = tk.Entry(root, textvariable=prefix_var, width=10,
                         font=('calibre', 10, 'normal'))
 
 # length_passwd
-length_passwd_label = tk.Label(root, text='length_passwd',
+length_passwd_label = tk.Label(root, text='Password Length:',
                                font=('calibre', 10, 'bold'))
 length_passwd_entry = tk.Entry(root, textvariable=length_passwd_var, width=10,
                                font=('calibre', 10, 'normal'))
 length_passwd_entry.insert(0, 2)
 
 # small char
-small_char_label = tk.Label(root, text='Small char',
+small_char_label = tk.Label(root, text='Small Characters [a,b,c]',
                             font=('calibre', 10, 'bold'))
 small_char_entry = tk.Checkbutton(
     root, variable=small_char_var, onvalue=True, offvalue=False,)
 
 # capital_char
-capital_char_label = tk.Label(root, text='Capital char',
+capital_char_label = tk.Label(root, text='Capital Characters [A,B,C]',
                               font=('calibre', 10, 'bold'))
 capital_char_entry = tk.Checkbutton(
     root, variable=capital_char_var, onvalue=True, offvalue=False,)
 
 # number_char
-number_char_label = tk.Label(root, text='Numbers',
+number_char_label = tk.Label(root, text='Numbers [1,2,3]',
                              font=('calibre', 10, 'bold'))
 number_char_entry = tk.Checkbutton(
     root, variable=number_char_var, onvalue=True, offvalue=False,)
 
 # special_char
-special_char_label = tk.Label(root, text='Special Char',
+special_char_label = tk.Label(root, text='Special Characters [/,?,#]',
                               font=('calibre', 10, 'bold'))
 special_char_entry = tk.Checkbutton(
     root, variable=special_char_var, onvalue=True, offvalue=False,)
@@ -81,7 +81,7 @@ special_char_entry = tk.Checkbutton(
 # output
 output_label = tk.Label(root, text='Genrated passwd: ',
                         font=('calibre', 10, 'bold'))
-output_entry = tk.Entry(root, textvariable=output_var, width=26,
+output_entry = tk.Entry(root, textvariable=output_var, width=28,
                         font=('calibre', 10, 'normal'))
 
 # creating a button using the widget
@@ -89,23 +89,47 @@ output_entry = tk.Entry(root, textvariable=output_var, width=26,
 sub_btn = tk.Button(root, text='Submit', command=submit)
 
 # placing the label and entry in
-# the required position using grid
+# the required position using place
+label_hight = 10
+label_width = 10
+entry_width = 260
+
+
+def label_hight_increment(label_hight):
+    label_hight += 30
+    return label_hight
+
+
 # method
-prefix_label.grid(row=0, column=0)
-prefix_entry.grid(row=0, column=2)
-length_passwd_label.grid(row=1, column=0)
-length_passwd_entry.grid(row=1, column=2)
-small_char_label.grid(row=2, column=0)
-small_char_entry.grid(row=2, column=1)
-capital_char_label.grid(row=3, column=0)
-capital_char_entry.grid(row=3, column=1)
-number_char_label.grid(row=4, column=0)
-number_char_entry.grid(row=4, column=1)
-special_char_label.grid(row=5, column=0)
-special_char_entry.grid(row=5, column=1)
-sub_btn.grid(row=6, column=1)
-output_label.place(x=10, y=200)
-output_entry.place(x=190, y=200)
+prefix_label.place(x=label_width, y=label_hight)
+prefix_entry.place(x=entry_width, y=label_hight)
+
+label_hight = label_hight_increment(label_hight)
+length_passwd_label.place(x=label_width, y=label_hight)
+length_passwd_entry.place(x=entry_width, y=label_hight)
+
+label_hight = label_hight_increment(label_hight)
+small_char_label.place(x=label_width, y=label_hight)
+small_char_entry.place(x=entry_width, y=label_hight)
+
+label_hight = label_hight_increment(label_hight)
+capital_char_label.place(x=label_width, y=label_hight)
+capital_char_entry.place(x=entry_width, y=label_hight)
+
+label_hight = label_hight_increment(label_hight)
+number_char_label.place(x=label_width, y=label_hight)
+number_char_entry.place(x=entry_width, y=label_hight)
+
+label_hight = label_hight_increment(label_hight)
+special_char_label.place(x=label_width, y=label_hight)
+special_char_entry.place(x=entry_width, y=label_hight)
+
+label_hight = label_hight_increment(label_hight)
+sub_btn.place(x=entry_width-40, y=label_hight+10)
+
+label_hight = label_hight_increment(label_hight)
+output_label.place(x=label_width, y=label_hight + 30)
+output_entry.place(x=entry_width-60, y=label_hight + 30)
 
 # performing an infinite loop
 # for the window to display
