@@ -1,6 +1,6 @@
 # Random Password Genrator
 
-![version](https://img.shields.io/github/license/kaushalBhatol/RandomPasswordGenrator)
+![version](https://img.shields.io/github/license/KaushalBhatol/RandomPasswordGenrator)
 ![version](https://img.shields.io/badge/version-2.0-blue)
 ![stablity](https://img.shields.io/badge/status-stable-blue)
 ![userinterface](https://img.shields.io/badge/UI-GUI-blue)
