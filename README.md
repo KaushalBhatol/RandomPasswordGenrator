@@ -1,4 +1,5 @@
 # RandomPasswordGenrator
-* version 1.0
-* Command Line Interface
+
+* version 2.0
+* Graphical user interface
 * python 3.1
